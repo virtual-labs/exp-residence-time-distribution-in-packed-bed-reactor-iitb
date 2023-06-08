@@ -94,5 +94,4 @@ function draw_chart() {
 //       data1.push((label[i]*pol[0]) + pol[1]);
 //     }
 //   }
-activity3();
 //# sourceMappingURL=activity6.js.map

@@ -56,19 +56,19 @@ function complete_main_table_2() {
   <div class="row" style="font-size: calc(0.7vw + 8px);"> 
 
   <div class="col-6">&Sigma; C<sub>i</sub> &Delta;t<sub>i</sub> => </div>  
-  <div class="col-6"><input type="text" name="" id="act4-tab3-inp1"></div>
+  <div class="col-6"><input disabled value="${sum_c1_delta_t_2.toFixed(2)}" type="text" name="" id="act4-tab3-inp1"></div>
 
   <br>
 
 
 
   <div class="col-6">&Sigma; C<sub>i</sub> t<sub>i</sub> &Delta;t<sub>i</sub> => </div>  
-  <div class="col-6"><input type="text" id="act4-tab3-inp2"></div>
+  <div class="col-6"><input disabled value="${sum_ci_ti_delta_t_2.toFixed(2)}" type="text" id="act4-tab3-inp2"></div>
 
   <br>
 
   <div class="col-6">&Sigma; C<sub>i</sub> ti<sup>2</sup> &Delta;t<sub>i</sub> => </div>  
-  <div class="col-6"><input type="text" name="" id="act4-tab3-inp3"></div>
+  <div class="col-6"><input disabled value="${sum_ci_ti_ti_delta_t_2.toFixed(2)}" type="text" name="" id="act4-tab3-inp3"></div>
 
 
   <br>
@@ -103,26 +103,14 @@ function complete_main_table_2() {
     // pp.addtorightpannel(act5_plot_btn, 3);
 }
 function verify_summations_2() {
-    let val1 = document.getElementById("act4-tab3-inp1");
-    let val2 = document.getElementById("act4-tab3-inp2");
-    let val3 = document.getElementById("act4-tab3-inp3");
+    // let val1: HTMLInputElement = <HTMLInputElement>document.getElementById("act4-tab3-inp1");
+    // let val2: HTMLInputElement = <HTMLInputElement>document.getElementById("act4-tab3-inp2");
+    // let val3: HTMLInputElement = <HTMLInputElement>document.getElementById("act4-tab3-inp3");
     let val4 = document.getElementById("act4-tab3-inp4");
     let val5 = document.getElementById("act4-tab3-inp5");
     let val6 = document.getElementById("act4-tab3-inp6");
-    console.log(parseFloat(val1.value));
+    // console.log(parseFloat(val1.value));
     // console.log(Q.value, To.value, Ti.value, ti.value, to.value);
-    if (!verify_values(parseFloat(val1.value), sum_c1_delta_t_2)) {
-        console.log("please correct the summaton of c1 delta t1 value");
-        return;
-    }
-    if (!verify_values(parseFloat(val2.value), sum_ci_ti_delta_t_2)) {
-        console.log("please correct the summaton of c1 t1 delta t1 value");
-        return;
-    }
-    if (!verify_values(parseFloat(val3.value), sum_ci_ti_ti_delta_t_2)) {
-        console.log("please correct the summaton of c1 t1^2 delta t1 value");
-        return;
-    }
     if (!verify_values(parseFloat(val4.value), t_bar_2)) {
         console.log("please correct the Mean Residence value");
         return;

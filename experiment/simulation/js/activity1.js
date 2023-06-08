@@ -102,48 +102,39 @@ function a1_canvas_mapping() {
     context.scale(1, -1);
 }
 function a1_draw_all_components() {
-    var sq = new Chemistry.Custome_image(tank, new Chemistry.Point(600, 200), 500, 280, canvas);
-    sq.name = "tank";
+    var sq = new Chemistry.Custome_image(tubular_reactor, new Chemistry.Point(600, 200), 72, 335, canvas);
+    sq.name = "tubular_reactor";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(pump, new Chemistry.Point(1450, 170), 350, 246.86, canvas);
-    sq.name = "pump";
+    var sq = new Chemistry.Custome_image(beaker, new Chemistry.Point(1450, 170), 105, 135, canvas);
+    sq.name = "beaker";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(test_section, new Chemistry.Point(1650, 600), 420, 550, canvas);
-    sq.name = "test_section";
+    var sq = new Chemistry.Custome_image(conductivity_meter, new Chemistry.Point(1650, 600), 157, 183, canvas);
+    sq.name = "conductivity_meter";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(horizontal_pipe, new Chemistry.Point(280, 830), 364, 151, canvas);
-    sq.name = "horizontal_pipe";
+    var sq = new Chemistry.Custome_image(rotameter, new Chemistry.Point(280, 830), 56, 154, canvas);
+    sq.name = "rotameter";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(vertical_pipe, new Chemistry.Point(150, 220), 80, 314, canvas);
-    sq.name = "vertical_pipe";
+    var sq = new Chemistry.Custome_image(tracer_injector, new Chemistry.Point(150, 220), 134, 44, canvas);
+    sq.name = "tracer_injector";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(rotometer, new Chemistry.Point(230, 580), 100, 302.8, canvas);
-    sq.name = "rotometer";
+    var sq = new Chemistry.Custome_image(centrifugal_pump, new Chemistry.Point(230, 580), 183, 147, canvas);
+    sq.name = "centrifugal_pump";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(heater, new Chemistry.Point(1150, 400), 350, 68.6, canvas);
-    sq.name = "heater";
-    scene.add(sq);
-    var sq = new Chemistry.Custome_image(temp_controller, new Chemistry.Point(1150, 700), 320, 313.6, canvas);
-    sq.name = "temp_controller";
-    scene.add(sq);
-    var sq = new Chemistry.Custome_image(t_in, new Chemistry.Point(600, 550), 170, 200, canvas);
-    sq.stang = -90;
-    sq.name = "t_in";
+    var sq = new Chemistry.Custome_image(storage_tank, new Chemistry.Point(1150, 400), 305, 176, canvas);
+    sq.name = "storage_tank";
     scene.add(sq);
 }
 //list of all activity 1 questions
 function a1_load_questions() { }
 {
     question = [];
-    question.push({ srno: 1, question: "Select <span style='color: #018fc3'>Pump</span>", ans: "pump", hint: ["Has Suction and Discharge", "Has valve attached", "Triangular Base"] });
-    question.push({ srno: 2, question: "Select <span style='color: #018fc3'> Tank </span>", ans: "tank", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
-    question.push({ srno: 3, question: "Select <span style='color: #018fc3'> Rotometer </span>", ans: "rotometer", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
-    question.push({ srno: 4, question: "Select <span style='color: #018fc3'>Test Section</span>", ans: "test_section", hint: ["Double Pipe", "pipe inside a pipe", "Has two inlets and outlets"] });
-    question.push({ srno: 5, question: "Select <span style='color: #018fc3'>Heater </span>", ans: "heater", hint: ["U-Shape", "Mounted horizontally", "Has two pins"] });
-    question.push({ srno: 6, question: "Select <span style='color: #018fc3'> Temperature Controller </span>", ans: "temp_controller", hint: ["Rectangular box with sensor", "Display SET T", "Has two wires protruding down"] });
-    question.push({ srno: 7, question: "Select <span style='color: #018fc3'> Temperature Indicator </span>", ans: "t_in", hint: ["Rectnagular box with sensor", "Horizontal", ""] });
-    question.push({ srno: 8, question: "Select <span style='color: #018fc3'> Verticle Pipe </span>", ans: "vertical_pipe", hint: ["Mounted Vertically", "Mounted Vertically", "Mounted Vertically"] });
-    question.push({ srno: 9, question: "Select <span style='color: #018fc3'> Horizontal Pipe </span>", ans: "horizontal_pipe", hint: ["Mounted Horizontally", "Mounted Horizontally", "Mounted Horizontally"] });
+    question.push({ srno: 1, question: "Select <span style='color: #018fc3'>Tubular Reactor</span>", ans: "tubular_reactor", hint: ["Has Suction and Discharge", "Has valve attached", "Triangular Base"] });
+    question.push({ srno: 2, question: "Select <span style='color: #018fc3'> Beaker </span>", ans: "beaker", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
+    question.push({ srno: 3, question: "Select <span style='color: #018fc3'> Conductivity Meter </span>", ans: "conductivity_meter", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
+    question.push({ srno: 4, question: "Select <span style='color: #018fc3'>Rotameter</span>", ans: "rotameter", hint: ["Double Pipe", "pipe inside a pipe", "Has two inlets and outlets"] });
+    question.push({ srno: 5, question: "Select <span style='color: #018fc3'> Tracer Injector </span>", ans: "tracer_injector", hint: ["U-Shape", "Mounted horizontally", "Has two pins"] });
+    question.push({ srno: 6, question: "Select <span style='color: #018fc3'> Centrifugal Pump </span>", ans: "centrifugal_pump", hint: ["Rectangular box with sensor", "Display SET T", "Has two wires protruding down"] });
+    question.push({ srno: 7, question: "Select <span style='color: #018fc3'> Storage Tank </span>", ans: "storage_tank", hint: ["Rectnagular box with sensor", "Horizontal", ""] });
 }
 function a1_display_current_question() {
     //document.getElementById("score-div-box").innerText = total_score.toString();
@@ -170,26 +161,22 @@ function a1_display_current_question() {
 }
 function load_higlighted_images() {
     highlighted_images = [
-        [tank_right, tank_wrong],
-        [pump_right, pump_wrong],
-        [test_section_right, test_section_wrong],
-        [horizontal_pipe_right, horizontal_pipe_wrong],
-        [vertical_pipe_right, vertical_pipe_wrong],
-        [rotometer_right, rotometer_wrong],
-        [heater_right, heater_wrong],
-        [temp_controller_right, temp_controller_wrong],
-        [t_in_right, t_in_wrong]
+        [tubular_reactor, tubular_reactor],
+        [beaker, beaker],
+        [conductivity_meter, conductivity_meter],
+        [rotameter, rotameter],
+        [tracer_injector, tracer_injector],
+        [centrifugal_pump, centrifugal_pump],
+        [storage_tank, storage_tank],
     ];
     a1_labels = [
-        new Chemistry.Text("tank", new Chemistry.Point(400, 80), canvas),
-        new Chemistry.Text("pump", new Chemistry.Point(1300, 1700), canvas),
-        new Chemistry.Text("test_section", new Chemistry.Point(1050, 730), canvas),
-        new Chemistry.Text("horizontal_pipe", new Chemistry.Point(200, 850), canvas),
-        new Chemistry.Text("vertical_pipe", new Chemistry.Point(100, 40), canvas),
-        new Chemistry.Text("rotometer", new Chemistry.Point(80, 500), canvas),
-        new Chemistry.Text("heater", new Chemistry.Point(1150, 480), canvas),
-        new Chemistry.Text("temp_controller", new Chemistry.Point(1000, 600), canvas),
-        new Chemistry.Text("t_in", new Chemistry.Point(600, 420), canvas),
+        new Chemistry.Text("tubular_reactor", new Chemistry.Point(400, 80), canvas),
+        new Chemistry.Text("beaker", new Chemistry.Point(1450, 60), canvas),
+        new Chemistry.Text("onductivity_meter", new Chemistry.Point(1650, 730), canvas),
+        new Chemistry.Text("rotameter", new Chemistry.Point(150, 850), canvas),
+        new Chemistry.Text("tracer_injector", new Chemistry.Point(100, 40), canvas),
+        new Chemistry.Text("centrifugal_pump", new Chemistry.Point(80, 500), canvas),
+        new Chemistry.Text("storage_tank", new Chemistry.Point(1150, 500), canvas),
     ];
 }
 function a1_random_questions() {
@@ -206,7 +193,7 @@ function a1_random_questions() {
         if (!found) {
             arrayofrandquestion.push(no);
         }
-        if (arrayofrandquestion.length >= 9) {
+        if (arrayofrandquestion.length >= 7) {
             break;
         }
     }
@@ -307,7 +294,7 @@ function a1_check_isinside(x, y) {
     }
 }
 function a1_change_question() {
-    if (current_question > 9) {
+    if (current_question > 7) {
         scene.draw();
         for (let j = 0; j < a1_index.length; j++) {
             a1_labels[a1_index[j]].draw();
@@ -353,4 +340,5 @@ function a1_mouseclick(e) {
     let y = Math.round((canvas.height - (e.clientY - rect.y)) / lscale);
     a1_check_isinside(x, y);
 }
+activity1();
 //# sourceMappingURL=activity1.js.map

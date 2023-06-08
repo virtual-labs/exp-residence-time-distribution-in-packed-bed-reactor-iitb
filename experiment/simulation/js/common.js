@@ -16,6 +16,7 @@ function random(min, max) {
 }
 function std_deviation(num) {
     let std = num / 100.0;
+    std = std / 2;
     let dev = num - random(-std, std);
     return dev;
 }

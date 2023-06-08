@@ -63,8 +63,8 @@ function activity3() {
 }
 function add_std_dev_to_tab12() {
     for (let i = 0; i < obt_1_data.length; i++) {
-        obt_1_data[i][1] = parseFloat(std_deviation(obt_1_data[i][1]).toFixed(2));
-        obt_2_data[i][1] = parseFloat(std_deviation(obt_2_data[i][1]).toFixed(2));
+        obt_1_data[i][1] = std_deviation(obt_1_data[i][1]);
+        obt_2_data[i][1] = std_deviation(obt_2_data[i][1]);
     }
     console.log(obt_1_data);
 }
@@ -116,10 +116,10 @@ function complete_obtab_1() {
         row.innerHTML = `
       <td>${i + 1}</td>
       <td>${obt_1_data[i][0]}</td>
-      <td>${obt_1_data[i][1]}</td>
-      <td>${10 + i + 1}</td>
+      <td>${obt_1_data[i][1].toFixed(2)}</td>
+      <td>${11 + i + 1}</td>
       <td>${obt_1_data[10 + i][0]}</td>
-      <td>${obt_1_data[10 + i][1]}</td>
+      <td>${obt_1_data[10 + i][1].toFixed(2)}</td>
       `;
         table_body.append(row);
     }
@@ -141,10 +141,10 @@ function complete_obtab_2() {
         row.innerHTML = `
       <td>${i + 1}</td>
       <td>${obt_2_data[i][0]}</td>
-      <td>${obt_2_data[i][1]}</td>
-      <td>${10 + i + 1}</td>
+      <td>${obt_2_data[i][1].toFixed(2)}</td>
+      <td>${11 + i + 1}</td>
       <td>${obt_2_data[10 + i][0]}</td>
-      <td>${obt_2_data[10 + i][1]}</td>
+      <td>${obt_2_data[10 + i][1].toFixed(2)}</td>
       `;
         table_body.append(row);
     }
